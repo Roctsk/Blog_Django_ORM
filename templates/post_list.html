@@ -8,7 +8,7 @@
 <body>
     {% for post in posts%}
     <li>
-        <strong>{{post.title}}</strong>- {{ post.published_date|date:"Y-m-d H:i" }}
+        <strong>{{post.title}}</strong>- {{ post.published_date|date:"Y-m-d H:i" }}<a href="{% url 'post_detail' post.pk%}">Детальніше</a>
     </li>
     {% endfor %}
 </body>
