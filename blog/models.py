@@ -19,7 +19,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    
+        
     def published_recently(self):
         return self.published_date >= timezone.now() - timedelta(days=7)
     

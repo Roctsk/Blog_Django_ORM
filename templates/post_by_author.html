@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пости за автором</title>
 </head>
@@ -9,11 +9,10 @@
     <p>Пости автора</p>
     <ul>
         {% for post in posts%}
-        <li><a href="{%url 'post_detail' post.pk%}">
-            {{post.title}}</a></li>
-            {%empty%}
-                <li>У цього автора ще немає постів</li>
-            {% endfor %}
+            <li><a href="{%url 'post_detail' post.pk%}">{{post.title}}</a></li>
+        {%empty%}
+            <li>У цього автора ще немає постів</li>
+        {% endfor %}
     </ul>
 </body>
 </html>

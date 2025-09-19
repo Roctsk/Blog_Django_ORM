@@ -16,4 +16,4 @@ def post_detail(request,pk):
 def post_by_author(request,author_id):
     author = get_object_or_404(Author,pk=author_id)
     posts = Post.objects.filter(author = author)
-    return render( request, "post_by_author.html" ,{"post":posts},{"author":author})
+    return render( request, "post_by_author.html" ,{"posts":posts},{"author":author})
